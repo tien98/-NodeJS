@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000
 const app = express()
 app.set("view engine", "ejs");
 app.set("views", "./views");
-const db_url = process.env.MONGOHQ_URL || 'mongodb://localhost/shop';
+const db_url = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/shop';
 mongoose.connect(db_url);
 
 app.use(bodyParser.json());
