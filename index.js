@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 var homeRoute = require('./routes/home.router.js');
 var productsRouter = require('./routes/admin/products.router');
-const port = (process.env.PORT || 3000)
+const port = process.env.PORT || 3000
 
 const app = express()
 app.set("view engine", "ejs");
