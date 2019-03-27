@@ -1,0 +1,39 @@
+<% include header_admin %>
+      <script>
+      function thongbao(tin){
+          if(window.confirm(tin)== true){
+            return true;
+          }
+          else 
+            return false;
+      }
+    </script>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-3"><%=title %> </h1>
+            <p class="lead">NodeJs</p>
+            <hr class="my-2">
+        </div>
+       <table class="table table-hover ">
+           <thead class="thead-inverse">
+               <tr>
+                   <th>STT</th>
+                   <th>Name Product</th>
+                   <th>Ảnh</th>
+                   <th>Action</th>
+               </tr>
+               </thead>
+               <tbody>
+               <%data.forEach(function(value, key){%>
+                   <tr>
+                       <td><%=key+1 %></td>
+                       <td><%=value.nameSP%></td>
+                       <td><img class="img-fluid img-thumbnail h-25 " src="<%=value.urlSP%>"/></td>
+                       <td><a href="/products/sua/<%=value._id%>"><i class="fa fa-edit"></i></a> / <a onclick="return thongbao('Bạn có muốn xóa không??');" href="/products/xoa/<%=value._id%>"><i class="fa fa-remove    "></i></a> </td>
+                   </tr>
+                <% }) %>
+               </tbody>
+       </table>
+    </div>
+  </body>
+</html>

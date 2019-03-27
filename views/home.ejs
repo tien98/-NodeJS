@@ -1,0 +1,18 @@
+<%include header %>
+    <div class="container">
+        <div class="row">
+        <% data.forEach(function(mot){%> 
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="<%= mot.urlSP%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="/<%= mot.nameSP%>.<%= mot._id %>"><%= mot.nameSP%></a>
+                        <h5 class="card-title"><%= mot.giaSP%></h5>     
+                    </div>
+                </div>
+            </div>
+        <%})%>
+        </div>
+    </div> 
+  </body>
+</html>

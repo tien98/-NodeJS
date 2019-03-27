@@ -1,0 +1,56 @@
+<% include header_admin %>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-3"><%=title %></h1>
+            <p class="lead">NodeJs</p>
+            <hr class="my-2">
+        </div>
+       
+            <form action="/products/them" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="form-group col-3">
+                    <label for="namesp">Tên</label>
+                    <input type="text"
+                        class="form-control" 
+                        name="nameSP" 
+                        id="namesp" 
+                        aria-describedby="helpId">
+                    </div>
+
+                    <div class="form-group col-3">
+                    <label for="giasp">Giá</label>
+                    <input type="text"
+                        class="form-control" 
+                        name="giaSP" 
+                        id="giasp" 
+                        aria-describedby="helpId" >
+                
+                    </div>
+                    <div class="form-group col-3 ">
+                    <label for="gioithieu">Giới thiệu</label>
+                    <input type="text"
+                        class="form-control" 
+                        name="gioiThieuSP" 
+                        id="gioithieu" 
+                        aria-describedby="helpId" >
+                
+                    </div>
+                    <div class="form-group col-3">
+                    <label for="thongso">Thông số</label>
+                    <input type="text"
+                        class="form-control" 
+                        name="thongSo" 
+                        id="thongso" 
+                        aria-describedby="helpId" >
+                    </div>
+                </div>
+                <div class="form-group">
+                <label for="anh">Ảnh sản phẩm</label>
+                    <input type="file" name="urlSP" >
+                </div>
+                <button type="submit" class="btn btn-primary" value="upload">Gửi</button>
+            </form>
+       
+    </div>
+  </body>
+</html>
