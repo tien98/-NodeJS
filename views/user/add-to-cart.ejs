@@ -1,0 +1,30 @@
+<% include ../header %> 
+    <% if(products){ %>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm6">
+                <ul class="list-group">
+                    <li class="list-group-item">Name Product
+                    <span class="badge"><%=products.totalQty%></span>
+                    <strong>Title</strong>
+                    <span class="label label-success"><%=totalPrice%></span>
+                    <div class="btn-group" role="group" aria-label="Button group">
+                        <button type="button">Action</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item active" href="#">1</a>
+                            <a class="dropdown-item active" href="#">All</a>
+                        </div>
+                    </div></li>
+                </ul>
+            <strong>Total:<%=totalPrice%> </strong>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm6">
+                <div class="btn btn-success">check out</div>   
+        </div>
+    </div>
+    <%}else{%>
+    <div>Not products</div>
+    <%}%>
+</html>

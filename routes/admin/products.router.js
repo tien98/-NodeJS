@@ -1,6 +1,5 @@
 var express = require('express');
 var controller = require('../../contorller/admin/products.controller');
-var validation = require('../../validation/products.validaton');
 var multer  = require('multer');
 
 var storage = multer.diskStorage({

@@ -1,41 +1,43 @@
 <% include header%>
  <div class="container">
         <div class="row">
-        <% data.forEach(function(mot){%> 
+
+        
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div class="card" style="width: 18rem;">
-                    <img src="<%= mot.urlSP %>" class="card-img-top" alt="...">
+                    <img src="<%= data.urlSP %>" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h2><%= mot.nameSP%></h2>
-                        <h5 class="card-title"><%= mot.giaSP%></h5>  
-                        <button type="button" class="btn btn-primary">Add To Card</button>
+                        <h2><%= data.nameSP%></h2>
+                        <h5 class="card-title"><%= data.giaSP%></h5>  
+                        <a href="/add-to-cart/<%=data._id %>"><button type="button" class="btn btn-primary">Add To Card</button></a>
                     </div>
                         
                 </div>
             </div>
+
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div class="card border-dark mb-3" style="max-width: 18rem;">
-                        <div class="card-header">Thông số <%= mot.nameSP %></div>
+                        <div class="card-header">Thông số <%= data.nameSP %></div>
                         <div class="card-body text-dark">
                             <h5 class="card-title">DEMO</h5>
-                            <p class="card-text">CPU | <%= mot.thongSo %></p>
-                    </div>
+                            <p class="card-text">CPU | <%= data.thongSo %></p>
+                        </div>
                 </div>     
              </div> 
+
             <div class="col-12">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                        <img src="<%= mot.urlSP %>" class="card-img" alt="...">
-                         
+                            <img src="<%= data.urlSP %>" class="card-img" alt="...">
                         </div>
                         <div class="card-body">
-                             <p class="card-text"><%= mot.gioiThieuSP %></p>
-                        </div>
+                             <p class="card-text"><%= data.gioiThieuSP %></p>
                         </div>
                     </div>
+                </div>  
             </div>
-        <%})%>    
+       
         </div>
     </div> 
 </html>
